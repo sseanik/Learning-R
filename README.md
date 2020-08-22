@@ -1,10 +1,10 @@
-Create some dummy Data in Python
+* Create some dummy Data in Python
 
-Save the Data to CSV
+* Save the Data to CSV
 
-Get R to create a Graph with the CSV
+* Get R to create a Graph with the CSV
 
-Get Latex to display the Graph
+* Get Latex to display the Graph
 
-Perform Regression with Matlab
+* Perform Regression with Matlab
 
