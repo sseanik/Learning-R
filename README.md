@@ -123,7 +123,28 @@ matrixVariable2 * matrixVariable3 #
 ### Read CSV Data
 
 ```r
-
+getwd() # Gets current working directory to tell you where to place files
+data <- read.csv("filename.csv", TRUE, ",") # filename, if first row is name of columns put TRUE, if not, FALSE, last arg is the delimitter
+class(data) # will output data.frame
+data <- read.csv("https://filelocation/file.csv", TRUE, ",") # files on the internet also work
 ```
+
+### Install Packages
+
+```r
+# install.packages("XML") need to install the package
+require(XML) # load the package
+items <- readHTMLTable("http://site/table.asp", which=1) # Read HTML Table into dataframe, 1st arg: URL, 2nd arg: which table, the 1st,2nd or 3rd on the website
+```
+
+### Creating Charts & Graphs
+
+```r
+data <- read.csv("filename.csv", TRUE, ",") 
+hist(data$column, main="Column Name", ylab="y-axis", xlab="x-axis") # Create a histogram
+plot(data$column, data$columnToCompareTo, ylab="y-axis", xlab="x-axis") # Create a scatter plot
+boxplot(data$column) # Create a Box plot
+```
+
 
 
