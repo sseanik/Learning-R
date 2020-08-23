@@ -70,4 +70,7 @@ d <- 1:5
 c + d # Will create 2 4 6 4 5 and will provide a warning (length is not a multiple of the other)
 a <- 1:7
 a < 5 # Will output TRUE TRUE TRUE TRUE FALSE FALSE FALSE
+f <- 50:60
+f[3] # will grab the 3rd item in the Vector (R has an index starting from 1)
+f[1:5] # will return a range of items
 ```
