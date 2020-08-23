@@ -83,4 +83,33 @@ id <- 1:5
 size <- c(15, 12, 11, 5, 29)
 duck <- c("rubber", "mallard", "goose", "candadian", "quack")
 dataframeVariable <- data.frame(id, size, duck) # Will create the dataframe
+nrow(dataframeVariable) # number of rows
+ncol(dataframeVariable) # number of columns
+dim(dataframeVariable) # numbers of rows AND columns
+names(dataframeVariable)[2] # give me the name of the 2nd column
+head(dataframeVariable) # will show the first few rows of the Dataframe
+tail(dataframeVariable) # will show the last few rows of the Dataframe
+dataframeVariable$size # will return the size column
+dataframeVariable[2] # will return the 2nd column
+dataframeVariable[1, 2] # will return the 1st row, 2nd column's data
+dataframeVariable[3, 1:3] # will return row 3 with columns 1, 2 and 3
+dataframeVarialbe[3, ] # will return everything in row 3
+dataframeVarialbe[ , 3] # will return everything in column 3
+class(dataframeVariable["size"]) # Will return "data.frame" WRONG
+class(dataframeVariable[, "size"]) # Will return numeric CORRECT
 ```
+
+### Lists
+
+* Vectors store data of the same type, lists can store mixed data types including dataframes and list of lists
+```r
+listVariable <- list(42, "word", c(1:5), dataframeVariable)
+names(listVariable) <- c("nums", "strings", "vectors", "dataframes") # will assign keys to the list
+listVariable[["nums"]] # will output 42
+listVariable[["dataframes"]]$size # will return the dataframe's size column
+listVariable[["newStrings"]] <- "newString" # Dynamically add new value to List
+```
+
+
+
+
