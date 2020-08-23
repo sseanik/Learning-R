@@ -1,3 +1,5 @@
+# Task:
+
 * Create some dummy Data in Python
 * Dummy Data type is Pandas DataFrame
 * Convert dataframe into CSV
@@ -6,9 +8,9 @@
 * Get Latex to display the Graph
 * Perform Regression with Matlab
 
-**R**:
+## R
 
-Variables:
+### Variables:
 
 * variables cannot start with a number or underscore
 * variable = x (same as Python)
