@@ -22,3 +22,12 @@ assign('nameOfVariable', value) # (Another way to assign a variable)
 rm(nameOfVariable) # will remove the value from nameOfVariable which will also remove it from memory
 ```
 
+### Data Types:
+```r
+class(nameOfVariable) # Will fetch the type of data stored in nameOfVariable
+# Example output: numeric, character (which is a string)
+numericVarialbe <- 123
+characterVariable <- "abc"
+is.numeric(numericVarialbe) # will return TRUE, will also return TRUE for typical doubles/floats
+is.numeric(characterVariable) # will return FALSE
+```
