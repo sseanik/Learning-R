@@ -110,6 +110,20 @@ listVariable[["dataframes"]]$size # will return the dataframe's size column
 listVariable[["newStrings"]] <- "newString" # Dynamically add new value to List
 ```
 
+### Matrix
 
+* Similar to a dataframe, but entire thing needs to be the same type of data
+```r
+matrixVariable <- matrix(1:100, nrow=10) # numbers, how many rows break the list into
+matrixVariable2 <- matrix(51:60, nrow=2)
+matrixVariable3 <- matrix(61:70, nrow=2)
+matrixVariable2 * matrixVariable3 # 
+```
+
+### Read CSV Data
+
+```r
+
+```
 
 
