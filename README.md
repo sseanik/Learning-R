@@ -74,3 +74,13 @@ f <- 50:60
 f[3] # will grab the 3rd item in the Vector (R has an index starting from 1)
 f[1:5] # will return a range of items
 ```
+
+### Dataframes
+
+* Dataframes are basically a spreadsheet (rows, columns) where a column can be a vector
+```r
+id <- 1:5
+size <- c(15, 12, 11, 5, 29)
+duck <- c("rubber", "mallard", "goose", "candadian", "quack")
+dataframeVariable <- data.frame(id, size, duck) # Will create the dataframe
+```
