@@ -146,5 +146,11 @@ plot(data$column, data$columnToCompareTo, ylab="y-axis", xlab="x-axis") # Create
 boxplot(data$column) # Create a Box plot
 ```
 
+```r
+install.packages("ggplot2") # package to give alternative way to create graphs
+library(ggplot2) # Sample data, e.g. diamonds
+qplot(diamonds$carat, diamonds$price, diamonds, color=diamonds$clarity)
+```
+
 
 
