@@ -161,6 +161,16 @@ abline(lm(mpg ~ hp, data = mtcars), col = "red") # linear model, linear regressi
 scatterplot(mpg ~ hp | cyl, data = mtcars, xlab = "hp", ylab = "mpg", main = "Enhanced Scatterplot")
 ```
 ```r
-a
+data <- data.frame(
+  weight <- c(50, 60, 70, 85, 92, 64, 54),
+  height <- c(150, 165, 172, 190, 195, 166, 144)
+)
+library(ggplot2)
+ggplot(data, aes(x = weight, y = height)) + 
+    geom_point() + geom_smooth(method = "lm")
+# lm = linear model, aes = aesthetic
 ```
+
+
+
 
