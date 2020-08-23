@@ -145,12 +145,22 @@ hist(data$column, main="Column Name", ylab="y-axis", xlab="x-axis") # Create a h
 plot(data$column, data$columnToCompareTo, ylab="y-axis", xlab="x-axis") # Create a scatter plot
 boxplot(data$column) # Create a Box plot
 ```
-
 ```r
 install.packages("ggplot2") # package to give alternative way to create graphs
 library(ggplot2) # Sample data, e.g. diamonds
 qplot(diamonds$carat, diamonds$price, diamonds, color=diamonds$clarity)
 ```
 
+### Regression
 
+```r
+library(help = 'datasets') # sample data sets
+plot(mtcars$hp, mtcars$mpg, main="Regression", xlab="HP", ylab="MPG")
+abline(lm(mpg ~ hp, data = mtcars), col = "red") # linear model, linear regression, miles per gallon relies on horsepower
+# install.packages("car")
+scatterplot(mpg ~ hp | cyl, data = mtcars, xlab = "hp", ylab = "mpg", main = "Enhanced Scatterplot")
+```
+```r
+a
+```
 
