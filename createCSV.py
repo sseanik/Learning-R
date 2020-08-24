@@ -4,20 +4,20 @@ import sys
 
 def inputData(filename):
     with open(filename, 'a') as file:
-        rows = input("Row Variables (comma separated): ")
-        rows = rows.split(',')
-        rows = [i.strip() for i in rows]
+        cols = input("Column Variables (comma separated): ")
+        cols = cols.split(',')
+        cols = [i.strip() for i in cols]
 
-        writer = csv.DictWriter(file, fieldnames=rows)
+        writer = csv.DictWriter(file, fieldnames=cols)
 
         while True:
             try:
-                newRow = {}
-                for row in rows:
-                    variable = input(f"{row}: ")
-                    newRow[row] = variable
+                row = {}
+                for col in cols:
+                    variable = input(f"{col}: ")
+                    row[col] = variable
                 writer.writeheader()
-                writer.writerow(newRow)
+                writer.writerow(row)
             except EOFError:
                 break
 
