@@ -1,13 +1,15 @@
 # Task:
 
-* Create some dummy Data in Python
-* Dummy Data type is Pandas DataFrame
-* Convert dataframe into CSV
-* Save the Data to CSV
-* Get R to create a Graph with the CSV
-* Get Latex to display the Graph
-* Perform Regression
-* Get Latex to display the new Graph
+* Use Python to convert/generate data into a CSV
+* Use R to create a Graph from the CSV data
+* Output as Latex file/data
+* Perform Regression on the CSV Data
+* Output as Latex file/data
+
+### Problems:
+
+* Could not get rpy2 module for Python to export Graphs as .tex (Could be fixed by using MatPlotlib instead)
+* Could not get command line arguments to be used as ggplot's aesthetic arguments
 
 ## R
 
@@ -145,12 +147,32 @@ hist(data$column, main="Column Name", ylab="y-axis", xlab="x-axis") # Create a h
 plot(data$column, data$columnToCompareTo, ylab="y-axis", xlab="x-axis") # Create a scatter plot
 boxplot(data$column) # Create a Box plot
 ```
-
 ```r
 install.packages("ggplot2") # package to give alternative way to create graphs
 library(ggplot2) # Sample data, e.g. diamonds
 qplot(diamonds$carat, diamonds$price, diamonds, color=diamonds$clarity)
 ```
+
+### Regression
+
+```r
+library(help = 'datasets') # sample data sets
+plot(mtcars$hp, mtcars$mpg, main="Regression", xlab="HP", ylab="MPG")
+abline(lm(mpg ~ hp, data = mtcars), col = "red") # linear model, linear regression, miles per gallon relies on horsepower
+# install.packages("car")
+scatterplot(mpg ~ hp | cyl, data = mtcars, xlab = "hp", ylab = "mpg", main = "Enhanced Scatterplot")
+```
+```r
+data <- data.frame(
+  weight <- c(50, 60, 70, 85, 92, 64, 54),
+  height <- c(150, 165, 172, 190, 195, 166, 144)
+)
+library(ggplot2)
+ggplot(data, aes(x = weight, y = height)) + 
+    geom_point() + geom_smooth(method = "lm")
+# lm = linear model, aes = aesthetic
+```
+
 
 
 
