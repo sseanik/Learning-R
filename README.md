@@ -1,17 +1,14 @@
 # Task:
 
-* Create some dummy Data in Python
-* Dummy Data type is Pandas DataFrame
-* Convert dataframe into CSV
-* Save the Data to CSV
-* Get R to create a Graph with the CSV
-* Get Latex to display the Graph
-* Perform Regression
-* Get Latex to display the new Graph
+* Use Python to convert/generate data into a CSV
+* Use R to create a Graph from the CSV data
+* Output as Latex file/data
+* Perform Regression on the CSV Data
+* Output as Latex file/data
 
 ### Problems:
 
-* Could not get rpy2 module for Python to export Graphs as .tex
+* Could not get rpy2 module for Python to export Graphs as .tex (Could be fixed by using MatPlotlib instead)
 * Could not get command line arguments to be used as ggplot's aesthetic arguments
 
 ## R
