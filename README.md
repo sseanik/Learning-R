@@ -9,6 +9,11 @@
 * Perform Regression
 * Get Latex to display the new Graph
 
+### Problems:
+
+* Could not get rpy2 module for Python to export Graphs as .tex
+* Could not get command line arguments to be used as ggplot's aesthetic arguments
+
 ## R
 
 ### Variables:
