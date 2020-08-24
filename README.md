@@ -42,8 +42,7 @@
 
 Will output:
 
-
-
+![alt text](https://raw.githubusercontent.com/sseanik/Learning/master/example.png?token=ANZO4CK7TAF5752IGIMABBC7JR3IG "Graph with Regression")
 ## R
 
 ### Variables:
