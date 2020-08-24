@@ -8,6 +8,7 @@ library(stringr)
 
 args <- commandArgs(trailingOnly = TRUE)
 
+
 # test if there is at least one argument: if not, return an error
 if (length(args) != 3) {
   stop("Usage: Rscript withArgs.R <CSV Filename> <x.axis> <y.axis>")
@@ -16,9 +17,7 @@ if (length(args) != 3) {
 fileName <- args[1]
 folderName <- str_replace(fileName, ".csv$", "")
 xAxis <- args[2]
-xIndex <- which(colnames(data) == xAxis)
 yAxis <- args[3]
-yIndex <- which(colnames(data) == yAxis)
 
 # Read data from a CSV into Dataframe
 data <- read.csv(fileName, TRUE, ",")
@@ -30,8 +29,8 @@ dir.create(folderName)
 tikz(file = paste(folderName, "/graph.tex", sep = ""), width = 5, height = 5)
 
 # Generate a Scatter Plot
-graph1 <- ggplot(data, aes(x <- xAxis, y = yAxis)) +
-    geom_line() +
+graph1 <- ggplot(data, aes(x <- .data[[xAxis]], y = .data[[yAxis]])) +
+    geom_point() +
     # X and Y
     labs(x = paste("$x$ = ", xAxis), y = paste("$y$ = ", yAxis)) +
     theme(plot.title = element_text(hjust = 0.5)) +
@@ -44,8 +43,8 @@ dev.off()
 tikz(file = paste(folderName, "/graphRegression.tex", sep = ""), width = 5, height = 5)
 
 # Generate a Scatter plot with regression
-graph2 <- ggplot(data, aes(x = xIndex, y = yIndex)) +
-    geom_line() +
+graph2 <- ggplot(data, aes(x = .data[[xAxis]], y = .data[[yAxis]])) +
+    geom_point() +
     geom_smooth(method = lm, se = FALSE) +
     # X and Y
     labs(x = paste("$x$ = ", xAxis), y = yAxis) +

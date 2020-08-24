@@ -6,12 +6,11 @@ library(tikzDevice)
 
 # Read data from a CSV into Dataframe
 data <- read.csv('plot.csv', TRUE, ",")
-data[2]
-
+data[["threads"]]
 
 
 # Generate a Scatter Plot
-graph1 <- ggplot(data, aes(x = !!"threads", y = !!"mph")) +
+graph1 <- ggplot(data, aes(x = .data[["threads"]], y = .data[["mph"]])) +
     geom_point() +
     # X and Y
     labs(x = paste("$x$ = ", 'threads'), y = paste("$y$ = ", 'mph')) +
