@@ -6,10 +6,14 @@
 * Perform Regression on the CSV Data
 * Output as Latex file/data
 
+### Usage:
+
+* Rscript noArgs.R will read in a CSV as a Dataframe and output a scatter plot and a scatter plot with regresssion
+* Rscript withArgs.R <fileName> <x axis> <y axis> will read in a given CSV as a dataframe and create graphs based on the x and y axes given
+
 ### Problems:
 
 * Could not get rpy2 module for Python to export Graphs as .tex (Could be fixed by using MatPlotlib instead)
-* Could not get command line arguments to be used as ggplot's aesthetic arguments
 
 ## R
 
