@@ -8,6 +8,7 @@
 
 ### Usage:
 
+* python3 createCSV.py will read in a CSV filename, then comma separated column names, then will prompt for each column variable
 * Rscript noArgs.R will read in a CSV as a Dataframe and output a scatter plot and a scatter plot with regresssion
 * Rscript withArgs.R <fileName> <x axis> <y axis> will read in a given CSV as a dataframe and create graphs based on the x and y axes given
 
