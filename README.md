@@ -14,7 +14,7 @@
 
 ### Problems:
 
-* Could not get rpy2 module for Python to export Graphs as .tex (Could be fixed by using MatPlotlib instead)
+* In trying to execute R code in Python, I could not get the rpy2 module for Python to export Graphs as .tex files (Could be potentially alleviated by using MatPlotlib graphs instead)
 
 
 ### Latex:
