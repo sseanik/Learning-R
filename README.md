@@ -16,6 +16,30 @@
 
 * Could not get rpy2 module for Python to export Graphs as .tex (Could be fixed by using MatPlotlib instead)
 
+
+### Latex:
+```latex
+\documentclass{article}
+%The package tikz is available in pgf
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{figure}[htbp]
+  \begin{center}
+    \include{graph1}
+  \end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+  \begin{center}
+    \include{graph2}
+  \end{center}
+\end{figure}
+
+\end{document}
+```
+
 ## R
 
 ### Variables:
