@@ -1,4 +1,4 @@
-# Task:
+# Task
 
 * Use Python to convert/generate data into a CSV
 * Use R to create a Graph from the CSV data
